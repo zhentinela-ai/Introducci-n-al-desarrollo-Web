@@ -1,0 +1,8 @@
+print("Este programa sirve para calcular el área y perimetro de un rectangulo y de un circulo")
+ancho = float(input("Introduce el ancho del rectangulo: "))
+alto = float(input("Introduce el alto del rectangulo: "))
+print("El area del rectangulo es: ", ancho*alto)
+print("El perimetro del rectangulo es: ", 2*(ancho+alto))
+radio = float(input("Introduce el radio del circulo: "))
+print("El area del circulo es: ", 3.14*radio**2)
+print("El perimetro del circulo es: ", 2*3.14*radio)

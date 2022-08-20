@@ -1,0 +1,38 @@
+body {
+  padding: 15px;
+  margin: 15px;
+}
+
+.container {
+  padding: 10px;
+  border: solid black 10px;
+  height: 300px;
+  width: 400px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+div[class^="element"] {
+  background: coral;
+  margin: 5px;
+}
+
+.middle {
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+}
+
+.element1 {
+  width: 25%;
+}
+.element2 {
+  height: 50%;
+}
+.element3 {
+  height: 50%;
+}
+.element4 {
+  width: 25%;
+}

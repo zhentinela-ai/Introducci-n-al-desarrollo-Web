@@ -1,0 +1,456 @@
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Righteous&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Oleo Script Swash Caps", cursive;
+}
+
+body {
+  background: blueviolet;
+  color: white;
+}
+
+header h1 {
+  padding: 20px;
+  margin: 15px;
+  letter-spacing: 5px;
+  word-spacing: 10px;
+  font-size: 40px;
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-family: "Righteous", cursive;
+}
+
+header {
+  text-align: center;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.jugador_uno img {
+  width: 100%;
+  height: 100%;
+}
+
+.productos {
+  display: flex;
+  font-size: 25px;
+  align-items: center;
+  justify-content: center;
+}
+
+.reglas {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  justify-content: center;
+  color: black;
+}
+
+.reserva img {
+  width: 30px;
+  height: 30px;
+}
+
+.reservar {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.titulo2 h2 {
+  font-size: 15px;
+}
+
+.resultados {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.resultados table {
+  width: 90%;
+  margin: 10px;
+  border-collapse: collapse;
+}
+
+.resultados th {
+  background: blue;
+  padding: 2px 2px;
+  margin: 5px;
+  color: white;
+  text-align: left;
+  padding: 2px 5px;
+  border: 0.1px solid whitesmoke;
+}
+
+.resultados td {
+  background: white;
+  padding: 2px 2px;
+  margin: 5px;
+  color: rgb(7, 7, 136);
+  padding: 2px 5px;
+  border: 0.1px solid whitesmoke;
+}
+
+.blog {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px;
+  transition: background 1.5s;
+  transition-timing-function: linear;
+}
+
+@media screen and (min-width: 768px) {
+  .cancha {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: darkviolet;
+    margin: auto;
+    width: 80vw;
+    height: 65vh;
+    border-radius: 15px;
+  }
+
+  .derecha {
+    display: grid;
+    grid-template-rows: 20% 30% 30% 20%;
+    grid-template-columns: 30% 70%;
+    margin-right: 2.5px;
+  }
+
+  .titulo1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+    padding: 15px;
+    border-radius: 15px 0 0 0;
+    border: 5px solid whitesmoke;
+  }
+
+  .titulo2 {
+    border: 5px solid whitesmoke;
+    padding: 15px;
+    text-align: center;
+    border-radius: 0 15px 0 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    line-height: 17px;
+  }
+
+  .jugador_uno {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    border-left: 5px solid whitesmoke;
+    border-right: 2.5px solid whitesmoke;
+    border-bottom: 2.5px solid whitesmoke;
+  }
+
+  .reserva {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+    font-size: 20px;
+    border-top: 2.5px solid whitesmoke;
+    border: 5px solid whitesmoke;
+    padding: 15px 10px;
+    border-radius: 0 0 0 15px;
+  }
+
+  .izquierda {
+    display: grid;
+    grid-template-rows: 20% 30% 30% 20%;
+    grid-template-columns: 70% 30%;
+    margin-left: 2.5px;
+  }
+
+  .jugador_dos {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-position: right;
+    background-image: url("../imgs/jugador_tenis_2.jpg");
+  }
+
+  .ubicacion {
+    background-image: url("../imgs/ubicacion.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0%;
+    text-align: center;
+    border: 5px solid whitesmoke;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    border-radius: 0 0 15px 0;
+    transition: filter 1.5s;
+  }
+
+  .productos {
+    border-left: 2.5px solid whitesmoke;
+    border-bottom: 2.5px solid whitesmoke;
+    border-right: 5px solid whitesmoke;
+    transition: font-size 0.5s, background 0.5s;
+  }
+
+  .reglas {
+    background-image: url("../imgs/reglas.jpg");
+    border: 2.5px solid whitesmoke;
+    border-right: 5px solid whitesmoke;
+    transition: filter 1.5s;
+  }
+
+  .resultados {
+    border: 5px solid whitesmoke;
+    border-bottom: 2.5px solid whitesmoke;
+    border-top: 2.5px solid whitesmoke;
+  }
+
+  .blog {
+    border: 5px solid whitesmoke;
+    border-bottom: 2.5px solid whitesmoke;
+  }
+
+  .horario,
+  .clases_privadas {
+    visibility: collapse;
+  }
+
+  .titulo1:hover {
+    background: linear-gradient(180deg, darkviolet 20%, rgb(193, 0, 211) 100%);
+  }
+
+  .titulo2:hover {
+    background: linear-gradient(180deg, darkviolet 20%, rgb(193, 0, 211) 100%);
+  }
+
+  .jugador_dos,
+  .jugador_uno {
+    background-size: cover;
+    border-right: 5px solid whitesmoke;
+    border-bottom: 2.5px solid whitesmoke;
+  }
+
+  .jugador_dos:hover::before {
+    background-image: url("../imgs/jugador_tenis_2.jpg");
+    background-size: cover;
+    background-position: right;
+    height: 100%;
+    filter: brightness(0.7);
+    content: "Clases privadas";
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  .blog:hover {
+    background: gray;
+    background-size: cover;
+    background-image: url("../imgs/celebrar.jpg");
+  }
+
+  .resultados .fila :hover {
+    background-color: darkblue;
+    color: white;
+    cursor: pointer;
+  }
+
+  .productos:hover {
+    background: transparent;
+    background: url("../imgs/productos.jpg");
+    font-size: 45px;
+  }
+
+  .jugador_uno {
+    background-image: url("../imgs/jugador_tenis_1.jpg");
+  }
+
+  .jugador_uno:hover::before {
+    background-image: url("../imgs/jugador_tenis_1.jpg");
+    background-size: cover;
+    height: 100%;
+    filter: brightness(0.7);
+    content: "Clases Grupales";
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  .reglas:hover {
+    filter: brightness(0.35);
+  }
+
+  .reserva:hover {
+    background: linear-gradient(180deg, darkviolet 20%, rgb(193, 0, 211) 100%);
+  }
+
+  .ubicacion:hover {
+    filter: saturate(200%);
+  }
+
+  .derecha,
+  .izquierda {
+    border-radius: 15px;
+    box-shadow: 0 0 15px 2px #efff;
+  }
+
+  header h1 {
+    text-shadow: 10px -10px 3px #09f;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  header {
+    margin: auto;
+  }
+
+  .cancha {
+    margin: auto;
+    border: 5px solid white;
+    border-radius: 15px;
+    width: 96vw;
+  }
+
+  .productos,
+  .reservar,
+  .resultados,
+  .blog p,
+  .blog a,
+  .reglas,
+  .titulo2 {
+    visibility: collapse;
+  }
+
+  .derecha {
+    border-bottom: 5px solid white;
+    margin-bottom: 1px;
+    height: 40vh;
+    display: flex;
+  }
+
+  .titulo1 {
+    width: 50%;
+    height: 100%;
+    border-top: 2.5px solid white;
+  }
+
+  .titulo {
+    height: 50%;
+    border-bottom: 2.5px solid white;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 5px;
+  }
+
+  .horario {
+    visibility: visible;
+    height: 50%;
+    border-top: 2.5px solid white;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 5px;
+  }
+
+  .jugador_uno {
+    background: url("../imgs/jugador_tenis_1.jpg");
+    background-size: cover;
+    width: 25%;
+    height: 100%;
+    order: 1;
+    border-radius: 0 10px 0 0;
+    border-style: none none none solid;
+  }
+
+  .reserva {
+    background: url("../imgs/productos.jpg");
+    width: 25%;
+    height: 100%;
+    order: -1;
+    border-radius: 10px 0 0 0;
+    border-style: none solid none none;
+  }
+
+  .izquierda {
+    border-top: 5px solid white;
+    margin-top: 1px;
+    height: 40vh;
+    display: flex;
+  }
+
+  .jugador_dos {
+    background: url("../imgs/jugador_tenis_2.jpg");
+    background-size: cover;
+    background-position: right;
+    width: 25%;
+    height: 100%;
+    border-right: 2.5px solid white;
+    border-radius: 0 0 0 10px;
+  }
+
+  .blog {
+    background: url("../imgs/ubicacion.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 25%;
+    height: 100%;
+    border-left: 2.5px solid white;
+    border-radius: 0 0 10px 0;
+    order: 2;
+  }
+
+  .ubicacion {
+    width: 50%;
+    height: 100%;
+  }
+
+  .ubicacion p {
+    height: 50%;
+    border-top: 2.5px solid white;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 5px;
+  }
+
+  .clases_privadas {
+    border-bottom: 2.5px solid white;
+    display: flex;
+  }
+
+  .jugador_uno:hover,
+  .jugador_dos:hover,
+  .blog:hover,
+  .reserva:hover {
+    filter: contrast(200%);
+    cursor: pointer;
+  }
+  .horario:hover,
+  .titulo:hover,
+  .horario:hover,
+  .ubicacion p:hover,
+  .clases_privadas:hover {
+    background: darkviolet;
+    filter: contrast(150%);
+  }
+
+  header:hover {
+    filter: drop-shadow(16px 16px 20px darkgray);
+    color: black;
+  }
+}

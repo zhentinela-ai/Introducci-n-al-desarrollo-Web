@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+  }
+  .cube {
+    display: block;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: scale(1.25, 1.25) rotateX(25deg) rotateY(25deg) perspective(1000px);
+  }
+  .face {
+    width: 200px;
+    height: 200px;
+    border: 3px solid rgba(0,10,30, 0.6); 
+    position: absolute;
+    background-color: rgba(0,50,70,0.4);
+    left: 30%;
+    top: 150px;
+    text-align: center;
+    line-height: 200px;
+    font-size: 100px;
+  }
+  .front {
+    transform: translateZ(100px);
+    color: blue;
+  }
+  .rear {
+    transform: translateZ(-100px) rotateY(180deg);
+    color: green;
+  }
+  .top {
+    transform: translateY(-100px) rotateX(90deg);
+    color: red;
+  }
+  .bottom {
+    transform: translateY(100px) rotateX(-90deg);
+    color: orange;
+  }
+  .right {
+    transform: translateX(100px) rotateY(90deg);
+    color: violet;
+  }
+  .left {
+    transform: translateX(-100px) rotateY(-90deg);
+    color: yellow;
+  }

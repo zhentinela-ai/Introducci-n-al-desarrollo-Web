@@ -1,0 +1,38 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+h1 {
+    background-color: darkviolet;
+    color: white;
+    font-style: italic;
+    margin: 0;
+    padding: 20px;
+}
+
+.first-paragraph {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-paragraph p {
+    font-size: 26px;
+}
+
+img{
+    width: 200px;
+    height: 100%;
+}
+
+p {
+    padding: 10px;
+    margin: 0 10px;
+}
+
+footer {
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+}

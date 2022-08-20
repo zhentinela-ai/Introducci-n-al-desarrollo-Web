@@ -1,0 +1,55 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  padding: 25px;
+}
+
+h1 {
+  color: purple;
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 36px;
+}
+
+#primer p{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+a[title*="definición"] {
+  color: red;
+}
+
+a[href$="google.com"] {
+  color: green;
+}
+
+h3 ~ p {
+  font-family: cursive;
+  color: darkblue;
+}
+
+table {
+  width: 100%;
+  padding: 15px;
+}
+
+tr > th {
+  background: blue;
+  color: white;
+}
+
+tr > td > code {
+  color: orange;
+}
+
+.first-table tr {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.second-table {
+  padding: 1.5px;
+}

@@ -1,0 +1,95 @@
+body {
+  font-family: 'Dancing Script', cursive;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(90deg, blue, white 50%);
+  color: whitesmoke; 
+}
+
+header img {
+  width: 25%;
+}
+
+p {
+  line-height: 15px;
+  letter-spacing: 5px;
+}
+
+img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+footer {
+  background: black;
+  color: white;
+  text-align: center;
+}
+
+@media screen and (min-width: 501px) and (max-width: 1204px){
+
+  footer{
+    background: lightskyblue;
+    color: darkmagenta;
+  }
+
+} 
+
+@media screen and (max-width: 500px) {
+
+  body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  header {
+    font-size: 25px;
+    background: lightslategrey;
+  }
+
+  header img {
+    display: none;
+  }
+
+  p {
+    line-height: 25px;
+    letter-spacing: 5px;
+    color: darkgreen;
+  }
+
+  img {
+    border-radius: 0px;
+  }
+
+}
+
+@media print {
+
+  body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  header {
+    font-size: 1em;
+    padding: 0;
+    margin: 0;  
+  }
+
+  header img {
+    display: none;
+  }
+
+  p {
+    line-height: 30px;
+    font-weight: 100;
+    font-size: 30px;
+    color: darkcyan;
+  }
+
+  img {
+    border-radius: 0px;
+  }
+
+}

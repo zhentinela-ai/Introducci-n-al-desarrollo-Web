@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        h3 {
+            font-size: 18px;
+            letter-spacing: 5px;
+        }
+        header {
+            background: darkblue !important;
+            text-align: center;
+            padding: 15px;
+        }
+        img {
+            height: 100px;
+            border-radius: 25%;
+            border: 4px dotted white;
+        }
+    </style>
+</head>
+<body>
+    <header style="background: darkred;">
+        <img src="./css.png" alt="">
+    </header>
+    <h1>Definición de CSS</h1>
+    <p>CSS (siglas en inglés de Cascading Style Sheets), en español «Hojas de estilo en cascada», es un lenguaje de diseño gráfico para definir y crear la presentación de un documento estructurado escrito en un lenguaje de marcado. Es muy usado para establecer el diseño visual de los documentos web, e interfaces de usuario escritas en HTML o XHTML; el lenguaje puede ser aplicado a cualquier documento XML, incluyendo XHTML, SVG, XUL, RSS, etcétera. Junto con HTML y JavaScript, CSS es una tecnología usada por muchos sitios web para crear páginas visualmente atractivas, interfaces de usuario para aplicaciones web y GUIs para muchas aplicaciones móviles (como Firefox OS).</p>
+    <p>CSS está diseñado principalmente para marcar la separación del contenido del documento y la forma de presentación de este, características tales como las capas o layouts, los colores y las fuentes. Esta separación busca mejorar la accesibilidad del documento, proveer más flexibilidad y control en la especificación de características presentacionales, permitir que varios documentos HTML compartan un mismo estilo usando una sola hoja de estilos separada en un archivo .css, y reducir la complejidad y la repetición de código en la estructura del documento.</p>
+    <p>La separación del formato y el contenido hace posible presentar el mismo documento marcado en diferentes estilos para diferentes métodos de renderizado, como en pantalla, en impresión, en voz (mediante un navegador de voz o un lector de pantalla), y dispositivos táctiles basados en el sistema Braille. También se puede mostrar una página web de manera diferente dependiendo del tamaño de la pantalla o tipo de dispositivo. Los lectores pueden especificar una hoja de estilos diferente, como una hoja de estilos CSS guardado en su computadora, para sobreescribir la hoja de estilos del diseñador.</p>
+    <p>La especificación CSS describe un esquema prioritario para determinar qué reglas de estilo se aplican si más de una regla coincide para un elemento en particular. Estas reglas son aplicadas con un sistema llamado de cascada, de modo que las prioridades son calculadas y asignadas a las reglas, así que los resultados son predecibles.</p>
+    <h2 style="text-decoration: underline; color: green;">Sintaxis</h2>
+    <p>CSS tiene una sintaxis simple y usa un conjunto de palabras clave en inglés para especificar los nombres de varias propiedades de estilo. Una hoja de estilos consiste en una serie de reglas. Cada regla, o conjunto de reglas consisten en uno o más selectores, y un bloque de declaración.</p>
+    <h3>Selectores</h3>
+    <p>Los selectores declaran qué etiquetas se le aplican a los estilos que coincidan con la etiqueta o atributo señalados en la regla.</p>
+    <h3>Bloque de declaraciones</h3>
+    <p>Un bloque de declaraciones consiste en una lista de declaraciones unidas. Cada declaración consiste en una propiedad, dos puntos (:), y un valor. Si hay muchas declaraciones en un bloque, un punto y coma (;) es insertado para separar cada declaración.</p>
+    <h3>Uso</h3>
+    <p>Antes del desarrollo de CSS, toda la información presentacional de los documentos HTML era incluida en el código HTML. Los colores de las fuentes, los estilos de fondo, la alineación de los elementos, los bordes y tamaños eran descritos explícitamente, a veces de manera redundante, dentro del HTML. CSS permite a los diseñadores mover toda la información presentacional a otro archivo, la hoja de estilos, resultando en un código HTML notablemente más simple.</p>
+    <h3>Posicionamiento</h3>
+    <p>CSS 2.1 define 3 esquemas de posicionamiento:</p>
+    <h4>Normal</h4>
+    <p>Los elementos inline, o de línea, son dispuestos de la misma manera que las letras en las palabras de un texto, una vez que ya no hay más espacio en una línea, entonces se empieza una nueva línea abajo. Los elementos block, o de bloque, son dispuestos verticalmente, como los párrafos.</p>
+    <h4>Flotante</h4>
+    <p>Un elemento float está fuera del flujo normal y puesto lo más posible a la derecha o izquierda en el espacio disponible. Los demás elementos fluyen alrededor del elemento float.</p>
+    <h4>Absoluto</h4>
+    <p>Un elemento posicionado absolutamente no tiene un lugar, y no afecta al flujo normal de los elementos. Ocupa el espacio que se le ha asignado independientemente de los demás elementos.</p>
+</body>
+</html>

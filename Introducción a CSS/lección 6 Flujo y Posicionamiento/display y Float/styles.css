@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: block;
+}
+
+header {
+  background: darkslateblue;
+  padding: 15px;
+  font-weight: 900;
+  color: white;
+}
+
+div[class^="box"] {
+  width: 150px;
+  height: 150px;
+  padding: 25px;
+  margin: 25px 0;
+  color: white;
+}
+
+.box-1 {
+  background: orange;
+}
+.box-2 {
+  background: purple;
+}
+
+.box-3 {
+  background: red;
+}
+
+.container {
+  padding: 0 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2, p {
+  display: inline;
+  padding: 0 25px;
+}
+
+h1 {
+  display: inline-block;
+}
+
+img {
+  height: 75px;
+  float: right;
+}

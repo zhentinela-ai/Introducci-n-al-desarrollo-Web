@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Avanzado</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    Uso de imgánes responsive
+  </header>
+  <div class="content">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta eveniet laudantium enim libero. Corporis iure facere perferendis et maiores, blanditiis debitis natus culpa laborum quia!</p>
+    <img src="girasoles.jpg" alt="campo de girasoles">
+    <figure>
+      <img src="girasoles.jpg" alt="campo de girasoles">
+      <figcaption>Campo de girasoles</figcaption>
+    </figure>
+    <picture>
+      <source media="(max-width: 500px)" srcset="girasoles.jpg"> 
+      <source media="(max-width: 768px)" srcset="girasoles.jpg"> 
+      <img src="girasoles.jpg" alt="girasoles">
+      <figure>
+        <video src="videoplayback.mp4" controls></video>
+        <figcaption>Wonderfull World</figcaption>
+      </figure>
+    </picture>
+  </div>
+  <footer>
+    Footer
+  </footer>
+</body>
+</html>

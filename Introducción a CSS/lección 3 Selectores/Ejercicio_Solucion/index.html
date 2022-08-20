@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="es" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de estilos en cascada - Extraido de Wikipedia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="definicion">
+        <h1>Hoja de estilos en cascada</h1>
+        <p><b>CSS</b> (siglas en inglés de <b>C</b>ascading <b>S</b>tyle <b>S</b>heets), en español «Hojas
+            de estilo en cascada», es un lenguaje de <a title="definicion">diseño gráfico</a> para definir y crear la
+            presentación de un documento estructurado escrito en un <a title="definicion">lenguaje de marcado</a>. Es
+            muy usado para
+            establecer el diseño visual de los documentos web, e interfaces de usuario escritas en <a
+                title="definicion">HTML</a> o
+            <a title="definicion">XHTML</a>; el lenguaje puede ser aplicado a cualquier <a title="definicion">documento
+                XML</a>, incluyendo XHTML, <a title="definicion">SVG</a>, <a href="http://www.google.com" title="definicion">XUL</a>, <a
+                title="definicion">RSS</a>, etcétera.
+            Junto con HTML y <a>JavaScript</a>, CSS es una tecnología usada por muchos <a>sitios web</a> para crear
+            páginas visualmente atractivas, interfaces de usuario para <a>aplicaciones web</a> y <a>GUIs</a> para muchas
+            aplicaciones <a title="moviles">móviles</a> (como <a title="Firefox">Firefox</a> OS).
+        </p>
+    </div>
+    <p>CSS está diseñado principalmente para marcar la separación del contenido del documento y la forma
+        de presentación de este, características tales como las capas o <i>layouts</i>, los colores y
+        las fuentes. Esta separación busca mejorar la accesibilidad del documento, proveer más
+        flexibilidad y control en la especificación de
+        características presentacionales, permitir que varios documentos HTML compartan un mismo estilo
+        usando una sola hoja de estilos separada en un archivo <code><b>.css</b></code>, y reducir la
+        complejidad y la repetición de código en la estructura del documento.
+    </p>
+    <p>La separación del formato y el contenido hace posible presentar el mismo documento marcado en
+        diferentes estilos para diferentes métodos de renderizado, como en pantalla, en impresión, en
+        voz (mediante un navegador de voz o un lector de pantalla), y dispositivos táctiles basados en
+        el <a title="Braille (lectura)" href="http://www.google.com">sistema Braille</a>. También se
+        puede mostrar una página web de manera diferente dependiendo del tamaño de la pantalla o tipo de
+        dispositivo. Los lectores pueden especificar una hoja de estilos diferente, como una hoja de
+        estilos CSS guardado en su computadora, para sobreescribir la hoja de estilos del diseñador.
+    </p>
+    <p>La especificación CSS describe un esquema prioritario para determinar qué reglas de estilo se
+        aplican si más de una regla coincide para un elemento en particular. Estas reglas son aplicadas
+        con un sistema llamado <i>de cascada</i>, de modo que las prioridades son calculadas y asignadas
+        a las reglas, así que los resultados son predecibles.
+    </p>
+    <p>La especificación CSS es mantenida por el <a title="World Wide Web Consortium">World Wide Web
+            Consortium (W3C)</a>. El <a title="Multipurpose Internet Mail Extensions">MIME type</a>
+        <code><b>text/css</b></code> está
+        registrado para su uso por CSS descrito en el <a>RFC 2318</a>.
+        El W3C proporciona una
+        herramienta de validación de CSS gratuita para los documentos CSS.
+    </p>
+
+    <h2><span class="mw-headline" id="Sintaxis">Sintaxis</span></h2>
+    <p>CSS tiene una sintaxis simple y usa un conjunto de palabras clave en inglés para especificar los
+        nombres de varias propiedades de estilo. Una hoja de estilos consiste en una serie de
+        <i>reglas</i>. Cada regla, o conjunto de reglas consisten en uno o más <i>selectores</i>, y un
+        <i>bloque de declaración</i>.
+    </p>
+    <h3><span class="mw-headline" id="Selectores">Selectores</span></h3>
+    <p>Los selectores declaran qué etiquetas se le aplican a los estilos que coincidan con la etiqueta o
+        atributo señalados en la regla.
+    </p>
+    <p>Los selectores pueden aplicarse a:
+    </p>
+    <ul>
+        <li>Todos los <a href="http://www.google.com" title="Etiqueta (lenguaje de marcado)">elementos</a> de
+            un tipo, como los párrafos
+            <code><b>&lt;p&gt;</b></code>.</li>
+        <li>Elementos seguidos de un atributo, en particular:
+            <ul>
+                <li><i>id</i>: identificador, un identificador único para la etiqueta.</li>
+                <li><i>class</i>: clase, un identificador para anotar múltiples elementos.</li>
+            </ul>
+        </li>
+    </ul>
+    <p>Las clases y los identificadores son sensibles a las mayúsculas, comienzan con letras, y pueden
+        incluir caracteres alfanuméricos y guiones bajos. Una clase se aplica a cualquier número de
+        elementos. Un identificador se aplica a un solo elemento.
+    </p>
+    <p>Las pseudoclases son usadas en los selectores CSS para permitir el formateo usando información
+        que no está incluida en el documento. Un ejemplo de una pseudoclase muy usada es
+        <code><b>:hover</b></code>, que identifica el contenido que está siendo apuntado por un puntero, como
+        el cursor del ratón. Este nombre se añade al selector, de esta manera: <code><b>a:hover</b></code> o
+        <code><b>#elementid:hover</b></code>. Una pseudoclase clasifica elementos, como <code><b>:link</b></code> o
+        <code><b>:visited</b></code>, mientras que un pseudoelemento hace una selección de elementos parciales,
+        como <code><b>::first-line</b></code> o <code><b>::first-letter</b></code>.
+    </p>
+    <p>Los selectores pueden ser combinados de muchas maneras para obtener una mayor flexibilidad y
+        precisión. Múltiples selectores pueden ser unidos en una misma línea para especificar elementos
+        por su ubicación, tipo de elemento, identificador, clase, o cualquier combinación de estos. El
+        orden de los selectores es importante. Por ejemplo, <code><b>div.myClass {color: red;}</b></code>
+        aplica a todos los elementos <code><b>&lt;div&gt;</b></code> con la clase myClass, mientras
+        que<code><b>.myClass div {color: red;}</b></code> aplica a todos los elementos <code><b>&lt;div&gt;</b></code>
+        que estén dentro de cualquier elemento con la clase myClass.
+    </p>
+    <p>La tabla siguiente proporciona un resumen de la sintaxis de los diversos selectores, indicando su
+        forma de uso y la versión de CSS en la que fueron introducidos:
+    </p>
+    <table class="first-table">
+
+        <tbody>
+            <tr>
+                <th>Patrón</th>
+                <th>Significado</th>
+                <th>Nivel CSS<br />de aparición
+                </th>
+            </tr>
+            <tr>
+                <td><code>E </code></td>
+                <td>un elemento de tipo E</td>
+                <td>1
+                </td>
+            </tr>
+            <tr>
+                <td><code>E:link</code></td>
+                <td>un elemento E que es un enlace que no ha sido visitado (:link) o ya fue visitado
+                    (:visited)</td>
+                <td>1
+                </td>
+            </tr>
+            <tr>
+                <td><code>E:active</code></td>
+                <td>un elemento E que está realizando cierta acción por parte del usuario</td>
+                <td>1
+                </td>
+            </tr>
+            <tr>
+                <td><code>E::first-line</code></td>
+                <td>la primera línea formateada de un elemento E</td>
+                <td>1
+                </td>
+            </tr>
+            <tr>
+                <td><code>E::first-letter</code></td>
+                <td>la primera letra formateada de un elemento E</td>
+                <td>1
+                </td>
+            </tr>
+            <tr>
+                <td><code>.c </code></td>
+                <td>todos los elementos con class="c"</td>
+                <td>1
+                </td>
+            </tr>
+            <tr>
+                <td><code>#myid</code></td>
+                <td>el elemento con id="myid"</td>
+                <td>1
+                </td>
+            </tr>
+            <tr>
+                <td><code>E.warning</code></td>
+                <td>un elemento E que pertenece a la clase "warning"</td>
+                <td>1
+                </td>
+            </tr>
+            <tr>
+                <td><code>E#myid</code></td>
+                <td>un elemento E cuyo id sea "myid"</td>
+                <td>1
+                </td>
+            </tr>
+            <tr>
+                <td><code>E F </code></td>
+                <td>un elemento F descendiente de un elemento E</td>
+                <td>1
+                </td>
+            </tr>
+            <tr>
+                <td><code>* </code></td>
+                <td>cualquier elemento</td>
+                <td>2
+                </td>
+            </tr>
+            <tr>
+                <td><code>E[foo]</code></td>
+                <td>un elemento E con un atributo "foo"</td>
+                <td>2
+                </td>
+            </tr>
+            <tr>
+                <td><code>E[foo="bar"]</code></td>
+                <td>un elemento E cuyo atributo "foo" tiene un valor exacto de "bar"</td>
+                <td>2
+                </td>
+            </tr>
+            <tr>
+                <td><code>E[foo~="bar"]</code></td>
+                <td>un elemento E cuyo atributo "foo" tiene una lista de valores separados por espacios,
+                    y uno de ellos es "bar"</td>
+                <td>2
+                </td>
+            </tr>
+            <tr>
+                <td><code>E:first-child</code></td>
+                <td>el primer hijo de un elemento E</td>
+                <td>2
+                </td>
+            </tr>
+            <tr>
+                <td><code>E:lang(eo)</code></td>
+                <td>un elemento E cuyo idioma esté especificado en "eo"</td>
+                <td>2
+                </td>
+            </tr>
+            <tr>
+                <td><code>E::before</code></td>
+                <td>contenido generado antes del contenido del elemento E</td>
+                <td>2
+                </td>
+            </tr>
+            <tr>
+                <td><code>E::after</code></td>
+                <td>contenido generado después del contenido del elemento E</td>
+                <td>2
+                </td>
+            </tr>
+            <tr>
+                <td><code>E &gt; F </code></td>
+                <td>un elemento F hijo de un elemento E</td>
+                <td>2
+                </td>
+            </tr>
+            <tr>
+                <td><code>E + F </code></td>
+                <td>un elemento E inmediatamente sucedido de un elemento F</td>
+                <td>2
+                </td>
+            </tr>
+            <tr>
+                <td><code>E[foo^="bar"]</code></td>
+                <td>un elemento E cuyo atributo "foo" tenga un valor que comience exactamente con la
+                    cadena "bar"</td>
+                <td>3
+                </td>
+            </tr>
+            <tr>
+                <td><code>E[foo$="bar"]</code></td>
+                <td>un elemento E cuyo atributo "foo" tenga un valor que finalice exactamente con la
+                    cadena "bar"</td>
+                <td>3
+                </td>
+            </tr>
+            <tr>
+                <td><code>E[foo*="bar"]</code></td>
+                <td>un elemento E cuyo atributo "foo" tenga un valor que contenga la subcadena "bar"
+                </td>
+                <td>3
+                </td>
+            </tr>
+            <tr>
+                <td><code>E:root</code></td>
+                <td>un elemento E en la raíz del documento</td>
+                <td>3
+                </td>
+            </tr>
+            <tr>
+                <td><code>E:nth-child(n)</code></td>
+                <td>un elemento E, el n-esimo hijo de este</td>
+                <td>3
+                </td>
+            </tr>
+            <tr>
+                <td><code>E:nth-last-child(n)</code></td>
+                <td>un elemento E, el n-esimo hijo de este, contando desde el último hijo</td>
+                <td>3
+                </td>
+            </tr>
+            <tr>
+                <td><code>E:nth-of-type(n)</code></td>
+                <td>un elemento E, el n-esimo hijo de este, contando solo los del mismo tipo que el
+                    padre</td>
+                <td>3
+                </td>
+            </tr>
+            <tr>
+                <td><code>E:nth-last-of-type(n)</code></td>
+                <td>un elemento E, el n-esimo hijo de este, contando solo los del mismo tipo que el
+                    padre, y desde el último hijo</td>
+                <td>3
+                </td>
+            </tr>
+            <tr>
+                <td><code>E:last-child</code></td>
+                <td>el último hijo de un elemento E</td>
+                <td>3
+                </td>
+            </tr>
+            <tr>
+                <td><code>E:first-of-type</code></td>
+                <td>un elemento E, los primeros hermanos de su tipo</td>
+                <td>3
+                </td>
+            </tr>
+            <tr>
+                <td><code>E:last-of-type</code></td>
+                <td>un elemento E, los últimos hermanos de su tipo</td>
+                <td>3
+                </td>
+            </tr>
+            <tr>
+                <td><code>E:only-child</code></td>
+                <td>el único hijo del elemento E</td>
+                <td>3
+                </td>
+            </tr>
+            <tr>
+                <td><code>E:only-of-type</code></td>
+                <td>el único hermano del elemento E</td>
+                <td>3
+                </td>
+            </tr>
+            <tr>
+                <td><code>E:empty</code></td>
+                <td>un elemento E que no posea hijos (incluyendo nodos de texto)</td>
+                <td>3
+                </td>
+            </tr>
+            <tr>
+                <td><code>E:target</code></td>
+                <td>un elemento E de enlace siendo pulsado</td>
+                <td>3
+                </td>
+            </tr>
+            <tr>
+                <td><code>E:enabled</code></td>
+                <td>un elemento E de interfaz de usuario habilitado</td>
+                <td>3
+                </td>
+            </tr>
+            <tr>
+                <td><code>E:disabled</code></td>
+                <td>un elemento E de interfaz de usuario deshabilitado</td>
+                <td>3
+                </td>
+            </tr>
+            <tr>
+                <td><code>E:checked</code></td>
+                <td>un elemento E de interfaz de usuario marcado (válido para los checkboxs y los
+                    radiobuttons)</td>
+                <td>3
+                </td>
+            </tr>
+            <tr>
+                <td><code>E:not(s)</code></td>
+                <td>un elemento E que no coincide con el selector simple s</td>
+                <td>3
+                </td>
+            </tr>
+            <tr>
+                <td><code>E ~ F </code></td>
+                <td>un elemento E sucedido de un elemento F</td>
+                <td>3
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h3><span id="Bloque_de_declaraciones">Bloque de declaraciones</span></h3>
+    <p>Un bloque de declaraciones consiste en una lista de declaraciones unidas. Cada declaración
+        consiste en una <i>propiedad</i>, dos puntos (<code>:</code>), y un <i>valor</i>. Si hay muchas
+        declaraciones en un bloque, un punto y coma (<code>;</code>) es insertado para separar cada
+        declaración.
+    </p>
+    <p>Las propiedades son insertadas en el estándar CSS. Cada propiedad tiene un conjunto de posibles
+        valores. Algunas propiedades afectan a cualquier elemento, otras solo a un grupo particular de
+        elementos.
+        Los valores pueden ser palabras clave, como "center" o "inherit", o valores numéricos, como
+        200px (200 píxeles) o 80% (80 por ciento del ancho de la ventana).
+        Los valores de colores son especificados por medio de una palabra clave (ej. "red"), de valores
+        hexadecimales (ej. #FF0000, pudiéndose abreviar como #F00), valores RGB en una escala del 0 al
+        255 (ej. <code>rgb(255, 0, 0)</code>), valores RGBA igual que los valores RGB pero con soporte
+        para el canal alfa de transparencias (ej. <code>rgba(255, 0, 0, 0.8)</code>), y valores <a title="HSL">HSL</a> o
+        <a title="HSLA (aún no redactado)">HSLA</a> (ej. <code>hsl(000, 100%,
+            50%)</code>,
+        <code>hsla(000, 100%, 50%, 80%)</code>).
+    </p>
+    <h3><span id="Uso">Uso</span></h3>
+    <p>Antes del desarrollo de CSS, toda la información presentacional de los documentos HTML era
+        incluida en el código HTML. Los colores de las fuentes, los estilos de fondo, la alineación de
+        los elementos, los bordes y tamaños eran descritos explícitamente, a veces de manera redundante,
+        dentro del HTML. CSS permite a los diseñadores mover toda la información presentacional a otro
+        archivo, la <a href="/wiki/Hoja_de_estilo" title="Hoja de estilo">hoja de estilos</a>,
+        resultando en un código HTML notablemente más simple.
+    </p>
+    <p>Por ejemplo, las cabeceras (<code>h1</code>), sub-cabeceras (<code>h2</code> ej. red),
+        sub-sub-cabeceras (<code>h3</code>), etc., son definidas estructuralmente usando HTML. En la
+        impresión y las pantallas, la elección de la fuente, tamaño, color y énfasis para esos elementos
+        es <i>presentacional</i>.
+    </p>
+    <p>Antes de CSS, los diseñadores que deseaban asignar características tipográficas, por ejemplo, a
+        todos los elementos <code>h2</code> tenían que repetir el código presentacional HTML por cada
+        elemento al que se le deseaba aplicar ese estilo. Esto creaba documentos más complejos, largos,
+        más propensos a errores y difíciles de mantener. CSS permite la separación entre la presentación
+        y la estructura. CSS puede definir el color, fuente, alineación del texto, tamaño, bordes,
+        espaciado, capas y muchas otras características tipográficas, y pueden aplicarse distintos
+        estilos de impresión y de pantalla. CSS también define estilos no visuales, como la velocidad de
+        lectura y énfasis en los lectores de textos aurales. El W3C ha declarado obsoleto el uso de las
+        etiquetas presentacionales HTML.
+    </p>
+    <p>Por ejemplo, aplicando estilos mediante etiquetas presentacionales HTML, un elemento
+        <code>h1</code> definido con texto rojo se puede representar como:
+    </p>
+    <p>Usando CSS, el mismo elemento puede escribirse usando propiedades de estilo <i>inline</i> en vez
+        de atributos y etiquetas de presentación:
+    </p>
+    <p>Una hoja de estilos CSS externa, descrita abajo, puede enlazarse con un documento HTML usando la
+        sintaxis siguiente:
+    </p>
+    <p>El código CSS se puede incluir en el código HTML en la etiqueta &lt;style&gt; dentro de la
+        etiqueta &lt;head&gt; del documento:
+    </p>
+    <h3><span id="Fuentes">Fuentes</span></h3>
+    <p>Los estilos CSS puede ser provistos desde varias fuentes. Esas fuentes pueden ser el navegador
+        web, el usuario y el diseñador. La información del diseñador puede ser clasificada de las
+        siguientes formas: inline, media type, importancia, especificidad del selector, orden de reglas,
+        herencia y definición de propiedades. La información de los estilos CSS puede estar en un
+        documento separado o puede estar embebido dentro de un documento HTML. Múltiples hojas de
+        estilos pueden ser importadas al mismo tiempo. Los diferentes estilos pueden ser aplicados
+        dependiendo de la salida del dispositivo usado en ese momento; por ejemplo, la versión para
+        monitores puede ser diferente de la versión impresa, así que los diseñadores pueden aplicar
+        diferentes estilos dependiendo del dispositivo usado.
+    </p>
+    <p>La hoja de estilos con la máxima prioridad controla la visualización del contenido. Las
+        declaraciones no establecidas en la fuente con máxima prioridad son sobreeescritas, como las
+        hojas de estilos del agente de usuario. Este proceso es llamado <i>cascading</i>, o cascada.
+    </p>
+    <p>Una de las metas de CSS es permitir a los usuarios un mayor control sobre la presentación.
+        Algunas personas que encuentran a los encabezados rojos en itálicas difíciles de leer pueden
+        aplicar una hoja de estilos diferente. Dependiendo del navegador y del sitio web, un usuario
+        puede escoger entre varias hojas de estilo provistas por los diseñadores, o pueden remover todas
+        las hojas de estilos añadidas y ver el sitio usando los estilos por defecto del navegador, o
+        pueden sobreescribir solo el estilo de los encabezados rojos en itálica sin alterar otros
+        atributos.
+    </p>
+    <table class="second-table">
+        <caption>Esquemas de prioridad CSS (de mayor a menor importancia)
+        </caption>
+        <tbody>
+            <tr>
+                <th>Prioridad</th>
+                <th>Tipo de origen de CSS</th>
+                <th>Descripción
+                </th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Importancia</td>
+                <td>La anotación <code>!important</code> sobreescribe la prioridad anterior
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Inline</td>
+                <td>Un estilo aplicado a un elemento HTML por medio del atributo <code>style</code>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Media Type</td>
+                <td>Una propiedad aplica a todas las media types, a menos que un <a title="Media type">media
+                        type</a>
+                    específico CSS esté definido
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Definido por el usuario</td>
+                <td>La mayoría de los navegadores tienen esta característica de accesibilidad: un estilo
+                    CSS definido por el usuario
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Especificidad del selector</td>
+                <td>Un selector contextual específico (<code>#heading p</code>) sobreescribe una
+                    definicón general (<code>p</code>)
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Orden de las reglas</td>
+                <td>La última regla especificada tiene una mayor prioridad
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Herencia</td>
+                <td>Si una propiedad no está especificada, es heredada del elemento padre
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Definición de propiedad CSS en el documento HTML</td>
+                <td>Una regla CSS común sobreescribe el valor del navegador
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Predeterminado del navegador</td>
+                <td>La prioridad más baja: estos valores son determinados por las especificaciones
+                    iniciales de la W3C
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <footer id="footer">
+        <p>Extraido de wikipedia.com</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+
+body{
+    margin: 0;
+    display: block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+table{
+    margin: 100px auto;
+}
+
+th,
+td{
+    font-size: 1.5em;
+    padding: 40px;
+    border: 1px solid white;
+}

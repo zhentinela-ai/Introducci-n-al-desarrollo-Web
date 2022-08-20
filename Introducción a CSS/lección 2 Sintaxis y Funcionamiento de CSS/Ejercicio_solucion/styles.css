@@ -1,0 +1,21 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 25px;
+}
+
+p {
+    color: darkblue;
+    font-size: 14px;
+    margin: 15px;
+}
+
+h1 {
+    font-size: 38px;
+    color: red;
+    font-style: italic;
+}
+
+h4 {
+    font-size: 18px;
+    color: orange;
+}
